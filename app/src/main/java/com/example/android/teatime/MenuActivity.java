@@ -34,6 +34,7 @@ public class MenuActivity extends AppCompatActivity {
     Intent mTeaIntent;
 
     public final static String EXTRA_TEA_NAME = "com.example.android.teatime.EXTRA_TEA_NAME";
+    public static final ArrayList<Tea> teas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,6 @@ public class MenuActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.menu_title));
 
         // Create an ArrayList of teas
-        final ArrayList<Tea> teas = new ArrayList<>();
         teas.add(new Tea(getString(R.string.black_tea_name), R.drawable.black_tea));
         teas.add(new Tea(getString(R.string.green_tea_name), R.drawable.green_tea));
         teas.add(new Tea(getString(R.string.white_tea_name), R.drawable.white_tea));
